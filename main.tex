@@ -1,0 +1,58 @@
+%% Bachelor Thesis Template of Wuhan Uniersity
+%%
+%% Created by Fing
+
+\documentclass[]{WHUBachelor}
+
+\begin{document}
+%%----------- 封面部分 ----------- %%
+  \stunum{2015301200070}
+  \ctitle{基于无人机-车的空-地联合目标搜索}
+  \cschool{电子信息学院}
+  \cmajor{电子信息工程}
+  \cauthor{李皓}
+  \cadvisor{杨文\quad 教授}
+  \cdate{二〇一九年五月}
+  \etitle{Air-Ground Joint Target Search based on\\UAV and UGV}
+  \eschool{School of Electronic Information}
+  \emajor{Electronic Information Engineering}
+  \eauthor{Li Hao}
+  \eadvisor{Prof. Yang Wen}
+  \edate{May 2019}
+  
+
+  \maketitlepage            % 封面
+  \makeENtitlepage          % 英文封面
+  \makestatement            % 申明
+
+%%----------- 前言部分 ----------- %%
+  \include{pages/abstract}  % 摘要
+  \contents                 % 目录
+  
+  \clearpage
+  \listoffigures			% 插图目录
+  
+  \clearpage
+  \listoftables				% 表格目录
+
+%%----------- 主体部分 ----------- %%
+  \clearpage
+  \pagenumbering{arabic} % 重新计数页码
+  \setcounter{page}{1}
+	
+  \renewcommand{\baselinestretch}{1}\normalsize
+  \baselineskip=23pt % 正文行距为 23 磅
+
+  \include{pages/chapter1}
+  \include{pages/chapter2}
+  \include{pages/chapter3}
+  \include{pages/chapter4}
+  \include{pages/chapter5}
+  
+
+%%----------- 结尾部分 ----------- %%
+  \addcontentsline{toc}{chapter}{参考文献}
+  \bibliography{ref/refs}   % 参考文献
+  \include{pages/thanks}    % 致谢
+
+\end{document}

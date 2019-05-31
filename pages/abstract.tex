@@ -1,0 +1,30 @@
+% 中英文摘要
+
+\begin{cnabstract}{无人机；无人车；基准标记；目标检测；目标定位；建图；导航}
+	
+随着机器人技术的迅速发展，相较于传统的单个机器人的单独作业，多机器人的协作显现出越来越大的优势，因而引起了极大的关注。无人机和无人车是两种使用最多、技术最为成熟的机器人，无人机具有高机动性和全局视觉，但续航能力差、载重量小；无人车续航能力强，载重量大，但只具有局部视觉。当二者联合工作时，无人机广阔的环境感知能力可以为无人车提供导航信息，无人车具有的局部视觉可以使其更好地执行任务，二者的结合可以提高任务的完成度，因此无人机和无人车的联合工作在目标搜索方面具有很大优势。本项目利用无人机进行目标的检测和定位，再利用无人车通过自主导航行使到目标处，实现了一套基于无人机-车的空地联合目标搜索系统。本文的主要工作如下：
+
+\begin{enumerate}[label=(\arabic*)] 
+	\item 无人机系统实现。在硬件方面，本文设计了一套基于大疆M100无人机、机载电脑Manifold 、云台相机、GPS模块、蓝牙串口模块和遥控器的无人机开发平台；在软件方面，本文利用基准标记作为搜索目标，实现了目标的快速检测，利用PnP (Perspective-n-Point)算法实现了目标定位，利用大疆的Onboard SDK实现了无人机的自主飞行；
+	\item 无人车系统实现。在硬件方面，本文设计了一套基于Robomasters步兵车底盘、STM32控制主板、TX2机载电脑、激光雷达、姿态传感器、GPS模块、蓝牙串口模块和遥控装置的无人车开发平台；在软件方面，本文利用麦克纳姆四轮编码器和姿态传感器实现了一种低成本的里程计，结合建图和导航算法，实现了无人车的自主定位、建图、避障和导航；
+	\item 空地联合目标搜索实现。本文先利用无人机扫描搜索区域，进行目标检测和定位，然后通过蓝牙串口模块将目标位置信息发送给无人车，最后无人车通过自主导航行驶到目标处，完成目标搜索任务。
+\end{enumerate}
+
+实验表明，本设计中的无人机系统和无人车系统具备了预期的功能，并且整个系统具备了空地联合目标搜索的能力。
+
+\end{cnabstract}
+
+
+\begin{enabstract}{UAV; UGV; fiducial marker; target detection; target location; mapping; navigation}
+	
+With the rapid development of robotics technology, the cooperation of multi-robots has shown more and more advantages than traditional separate operation of single robot, which has attracted great attention. Unmanned aerial vehicle (UAV) and unmanned ground vehicle (UGV) are two kinds of most used and most mature robots. UAV has high mobility and global vision, but its endurance is poor and its load is small. UGV has strong endurance and heavy load, but only has local vision. When they work together, UAV's wide environmental awareness can provide navigation information for UAV and UAV's local vision can make it perform tasks better. The combination of UAV and UGV can improve the completion of tasks. Therefore, the joint work of UAV and UGV has great advantages in target search. In this project, using UAV to detect and locate the target, and using UGV to move to the target through autonomous navigation, an air-ground joint target search system based on UAV-UGV is realized. The main work of this thesis is as follows:
+
+\begin{enumerate}[label=(\arabic*)] 
+	\item An UAV system has been realized. In terms of hardware, this thesis designs an UAV development platform based on DJI M100, Manifold, gimbal camera, GPS module, Bluetooth serial port module and remote control. In terms of software, this thesis uses fiducial marker as detection target to achieve rapid target detection, uses Perspective-n-Point (PnP) algorithm to achieve target location, and uses DJI Onboard SDK to achieve autonomous flight of UAV.
+	\item An UGV system has been implemented. In terms of hardware, this thesis designs an UGV development platform based on Robomaster infantry vehicle chassis, STM32 main control board, TX2 on-board computer, LiDAR, attitude sensor, GPS module, Bluetooth serial port module and remote control device. In terms of software, a low-cost odometry is realized by using Mecanum wheel encoder and attitude sensor. Combining the mapping and navigation algorithm, autonomous location, mapping, obstacle avoidance and navigation of UGV are realized.
+	\item The air-ground joint target search has been realized. In this thesis, the UAV scans the search area, detects and locates the target, then transmits the location information of the target to the UGV through bluetooth serial port module. Finally the UGV moves to the target through autonomous navigation to complete the target search task. 
+\end{enumerate}
+
+Experiments show that the UAV system and UGV system in this design possess the expected functions, and the whole system has the ability of space-ground joint target search.
+
+\end{enabstract}
